@@ -1,0 +1,88 @@
+
+.deleteicon {
+  position: absolute;
+  top: -22px;
+  right: -11px;
+  rotate: 12deg;
+  color: black;
+  background-color: red;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteicon svg{
+  color: white;
+  font-size: 32px;
+}
+svg {
+  font-size: 3rem;
+  
+
+}
+.additem-poopup {
+  height: 56vh; 
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 6;
+  left: 50%;
+  backdrop-filter: blur(10px);
+  top: 50%;
+  transition: all .3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fromContainer {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+    border-radius: 20px;
+}
+
+.fromContainer::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(25px);
+  transform: translateY(30px) scale(0.9);
+}
+
+.fromContainer:nth-last-child(1),
+.fromContainer:nth-child(1)::before
+{
+  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+
+.fromContainer form{
+  width: 90%;
+  position: relative;
+
+}
+.fromContainer form input{
+  width: 90%;
+  height: 40px;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+label {
+  display: block;
+}
+.rmdp-container {
+  display: block !important;
+}

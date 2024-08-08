@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: end;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.maincontainer {
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+/*home css*/
+
+.container {
+  height: 100vh; /* 100% of viewport height */
+  width: 100vw; /* 100% of viewport width */
+  overflow: hidden; /* Ensure no overflow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  position: relative;
+}
+
+.container img {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 60px;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+}
+
+.example-container div {
+  background: white;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.animation-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 8%;
+  background-color: red;
+  position: absolute;
+}
+
+/*today*/
+.today-box {
+  height: 200px;
+  width: 300px;
+  background-color: beige;
+}
+/*editpost*/
+.editContainer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(25px);
+  transform: translateY(-30px) scale(0.9);
+}
+.editContainer:nth-last-child(1),
+.editContainer:nth-child(1)::before {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.editContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  top: 112px;
+}
+.Editboxon {
+  bottom: 0;
+  transition: all 1.2s ease-in-out;
+}
+.Editboxoff {
+  bottom: -500px;
+  transition: all 1.2s ease-in-out;
+}
+.inputEditField {
+  z-index: 5;
+  width: 90%;
+  
+}
+.editButton {
+  z-index: 4;
+  z-index: 4;
+  padding: 10px;
+  width: 82px;
+  border: none;
+  border-radius: 3px;
+  background-color: bisque;
+}
+form {
+  z-index: 1;
+}
+.editform {
+  height: 400px;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+input#uTitle {
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+.editbutton-group{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0px;
+
+}
